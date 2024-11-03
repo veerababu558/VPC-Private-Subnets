@@ -16,7 +16,7 @@ This project demonstrates the deployment of applications within private subnets 
 * Elastic Compute Cloud(EC2)
 
 ### Project Architecture:
-   Image1
+   ![Project Architecture](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/VPC%20Project%20Arch.drawio.png)
    
 ## Steps
 ## 1. Creation of AWS Virtual Private Cloud(VPC):
