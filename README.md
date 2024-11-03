@@ -95,7 +95,13 @@ This project demonstrates the deployment of applications within private subnets 
 ## 5. Testing
 * Open a web browser, enter the Load balancer endpoint, and press the Enter. Response comes from instance 1.
   Image 29
-* Open another web browser window, enter the ELB endpoint, and press Enter. The ELB tries to forward the traffic to the second instance; however, it is unable to reach it because the application server is not running yet
+* Open another web browser window, enter the ELB endpoint, and press Enter. The ELB tries to forward the traffic to the second instance; however, it is unable to reach it because the application server is not running yet.
+  Image 30
+* Now, create a sample HTML file and run the Python server on the second instance as well.
+  Image 31
+* Open two web browser windows, enter the ELB endpoint, and press Enter. The response comes from both instances now. 
+  Below is the screenshot for the same.
+  Image 32
      
      
      
