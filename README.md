@@ -6,14 +6,14 @@
 This project demonstrates the deployment of applications within private subnets on AWS, configuring auto-scaling to handle varying workloads, and setting up an Elastic Load Balancer (ELB) to distribute incoming traffic across healthy instances. This setup enhances security by restricting direct internet access to the instances, and the load balancer manages traffic distribution across healthy instances to ensure high availability and fault tolerance.
 
 ### Prerequisites:
-  AWS account
+  AWS account.
   
 ### AWS Services:
-* Virtual Private Cloud(VPC)
-* Auto Scaling Group(ASG)
-* Bastion Host(EC2)
-* Elastic Load Balancer(ELB)
-* Elastic Compute Cloud(EC2)
+* Virtual Private Cloud(VPC).
+* Auto Scaling Group(ASG).
+* Bastion Host(EC2).
+* Elastic Load Balancer(ELB).
+* Elastic Compute Cloud(EC2).
 
 ### Project Architecture:
    ![Project Architecture](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/VPC%20Project%20Arch.drawio.png)
