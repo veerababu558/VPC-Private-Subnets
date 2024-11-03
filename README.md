@@ -78,33 +78,41 @@ This project demonstrates the deployment of applications within private subnets 
 ## 4. Creation of Load Balancer:  
 * In the AWS Management Console, navigate to EC2.
 * Click on "Load Balancer" in the left pane and select "Create" to choose "Application Load Balancer"
-    Image 20
+    ![Image20](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image20.png)
 * Provide the load balancer name as “project-lb-001,” select the custom VPC created, and choose the public subnets.
-  Image 21
+  ![Image21](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image21.png)
+  ![Image21-1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image21-1.png)
 * Choose a target type as "Instances"
-  Image 22
+  ![Image22](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image22.png)
 * Provide the target group name as "project-tg-001" and enter the port number as 8000, as our application runs on this port.
-  Image 23
+  ![Image23](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image23.png)
 * Enter the port number as 8000, click on "Include as pending below" and then click on the "Create target group".
-  Image 24
+  ![Image24](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image24.png)
 * Target group is created successfully.
-  Image 25
+  ![Image24-1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image24-1.png)
 * Navigate back to the Load Balancer page, click on refresh, select the newly created target group from the dropdown, and click on 'Create Load Balancer.'
-  Image 26
-* The Load Balancer is created successfully,however,it is unable to reach the instances because port 80 is not open in the previosuly selected security group.Below is the screenshot.
-  Image 27
+  ![Image25](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image25.png)
+  ![Image25-1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image25-1.png)
+* The Load Balancer is created successfully,however,it is unable to reach the instances because port 80 is not open in the previosuly selected security 
+   group.Below is the screenshot.
+  ![Image26](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image26.png)
+  ![Image26-1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image26-1.png)
+  ![Image26-2](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image26-2.png)
 * Add port 80 to the security group rule, allowing the load balancer to reach the instances now.
-  Image 28
+  ![Image27](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image27.png)
+  ![Image27-1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image27-1.png)
+  ![Image27-2](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image27-2.png)
 ## 5. Testing
 * Open a web browser, enter the Load balancer endpoint, and press the Enter. Response comes from instance 1.
-  Image 29
+  ![Image28](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image28.png)
 * Open another web browser window, enter the Load balancer endpoint, and press Enter. The ELB tries to forward the traffic to the second instance; however, it is unable to reach it because the application server is not running yet.
-  Image 30
+  ![Image29](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image29.png)
 * Now, create a sample HTML file and run the Python server on the second instance as well.
-  Image 31
+  ![Image30](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image30.png)
 * Open two web browser windows, enter the Load balancer endpoint, and press Enter. The response comes from both instances now. 
   Below is the screenshot for the same.
-  Image 32
+  ![Image31](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image31.png)
+  ![Image32](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image32.png)
      
      
      
