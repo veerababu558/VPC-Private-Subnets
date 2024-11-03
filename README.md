@@ -90,7 +90,12 @@ This project demonstrates the deployment of applications within private subnets 
   Image 26
 * The Load Balancer is created successfully,however,it is unable to reach the instances because port 80 is not open in the previosuly selected security group.Below is the screenshot.
   Image 27
-  
+* Add port 80 to the security group rule, allowing the load balancer to reach the instances now.
+  Image 28
+## 5. Testing
+* Open a web browser, enter the Load balancer endpoint, and press the Enter. Response comes from instance 1.
+  Image 29
+* Open another web browser window, enter the ELB endpoint, and press Enter. The ELB tries to forward the traffic to the second instance; however, it is unable to reach it because the application server is not running yet
      
      
      
