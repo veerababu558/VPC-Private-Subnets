@@ -25,54 +25,56 @@ This project demonstrates the deployment of applications within private subnets 
 - Under Resource to create, select VPC and more.
      ![Image1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image2.png)
 * Leave all other options at their default and click on "Create VPC".
-     ![Image3] (https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image3.png)
+     ![Image3](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image3.png)
 * The VPC is created successfully with 2 public and 2 private subnets across 2 availability zones.
-     ![Image4] (https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image4.png)
-     ![Image4-1] (https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image4-1.png)
+     ![Image4](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image4.png)
+     ![Image4-1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image4-1.png)
      
 ## 2. Creation of Auto Scaling Group:
 * In the AWS Management Console, navigate to EC2.
 * Click on "Auto Scaling" in the left pane
-     Image 5
+     ![Image5](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image5.png)
 * Provide the Auto Scaling group name as "project-asg-a-001" and click on "Create a launch template."
-     Image 6
+     ![Image6](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image6.png)
 * Provide the launch template name and select the Ubuntu instance type, then select the “vpc-key-pair-001.”
 * Select the custom VPC that was created and the security group with ports opened for 22 and 8000 (the application is running on port 8000).
 * Click on the “Create launch template.” The launch template is created successfully.
 * Navigate to the Auto Scaling group page, refresh “Launch templates,” and select the newly created launch template, custom VPC, and private subnets. Set the          desired capacity to 2, the minimum capacity to 2, and the maximum capacity to 2.
-     Image 7
+     ![Image7](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image7.png)
 * Click on the "Create Auto Scaling group."
 * The Auto Scaling is created successfully.
-     Image 8
+     ![Image8](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image8.png)
 ## 3. Creation of Bastion Host:
 * In the AWS Management Console, navigate to EC2.
 * Click on the "Launch instance" button.
 * Provide the instance name as "project-bastion-host-001."
-    Image 9
+    ![Image9](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image9.png)
 * Select the "ubuntu" OS type AMI
-    Image 10
+    ![Image10](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image10.png)
+    ![Image10-1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image10-1.png)
 * Select the "vpc-key-pair-001", the custom VPC that was created and the public subnet.
-    Image 11
+    ![Image11](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image11.png))
 * Create a security group with port number 22 opened.
-    Image 12
+    ![Image12](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image12.png)  
 * Click on the "Launch instance",The Bastion host is created successfully.
-    Image 13
+    ![Image13](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image13.png)
+    ![Image13-1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image13-1.png)
 * Log in to the Bastion Host using the SSH command.
      ssh -i <key pair name> ubuntu@<IP address>
-    Image 14
+    ![Image14](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image14.png)
 * Successfully log in to the Bastion host launched in the public subnet.
-    Image 15
+    ![Image15](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image15.png)
 * Copy the key pair file to the Bastion host, as we need to connect to the EC2 instances created in the private subnet ,create HTML file, and run the Python Server.
     scp -i<key pair name>  <key pair name> ubuntu@<IP address>:/home/ubuntu
     key pair file is copied successfully.
-    Image 16
+    ![Image16](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image16.png)
 *  Logging into the first private instance using the SSH command.
-    Image 17
+    ![Image17](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image17.png)
 * Create a sample .HTML file using vi editor.
-    Image 18
+    ![Image18](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image18.png)
 *  Run the Python server using the following command.
        python3 -m http.server 8000
-    Image 19
+    ![Image19](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image19.png)
 ## 4. Creation of Load Balancer:  
 * In the AWS Management Console, navigate to EC2.
 * Click on "Load Balancer" in the left pane and select "Create" to choose "Application Load Balancer"
