@@ -25,9 +25,10 @@ This project demonstrates the deployment of applications within private subnets 
 - Under Resource to create, select VPC and more.
      ![Image1](https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image2.png)
 * Leave all other options at their default and click on "Create VPC".
-     Image 3
+     ![Image3] (https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image3.png)
 * The VPC is created successfully with 2 public and 2 private subnets across 2 availability zones.
-     Image 4
+     ![Image4] (https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image4.png)
+     ![Image4-1] (https://github.com/veerababu558/VPC-Private-Subnets/blob/main/Screenshots/Image4-1.png)
      
 ## 2. Creation of Auto Scaling Group:
 * In the AWS Management Console, navigate to EC2.
